@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="DrugBase">
-    <defName>Rimrona</defName>
-    <label>rimrona</label>
-    <description>The first beverage besides water ever consumed by mankind. Beer can taste good, but its main effect is intoxication. Excessive consumption can lead to alcohol blackouts and, over time, addiction.</description>
+  <ThingDef Name="BeerLoverBeerBase" ParentName="DrugBase" Abstract="True">
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
     <descriptionHyperlinks>
       <HediffDef>AlcoholHigh</HediffDef>
       <HediffDef>AlcoholTolerance</HediffDef>
@@ -13,22 +12,12 @@
       <HediffDef>Cirrhosis</HediffDef>
       <HediffDef>ChemicalDamageModerate</HediffDef>
     </descriptionHyperlinks>
-    <graphicData>
-      <texPath>Things/Item/Drug/Rimrona</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-    </graphicData>
-    <equippedAngleOffset>-150</equippedAngleOffset>
-    <rotatable>false</rotatable>
-    <stackLimit>6</stackLimit>
-    <costList>
-      <RimronaWort>1</RimronaWort>
-    </costList>
     <statBases>
       <DeteriorationRate>0.5</DeteriorationRate>
       <MarketValue>12</MarketValue>
       <Mass>0.3</Mass>
       <Flammability>0.5</Flammability>
-      <Nutrition>0.08</Nutrition>
+      <Nutrition>0</Nutrition>
     </statBases>
     <ingestible>
       <foodType>Fluid, Processed, Liquor</foodType>
@@ -55,19 +44,17 @@
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AlcoholTolerance</hediffDef>
-          <severity>0.016</severity>
+          <severity>0.008</severity>  <!--was 0.016-->
           <divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>
     </ingestible>
-    <equipmentType>Primary</equipmentType>
-    <techLevel>Neolithic</techLevel>
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Alcohol</chemical>
         <addictiveness>0.010</addictiveness>
-        <minToleranceToAddict>0.25</minToleranceToAddict>
-        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <minToleranceToAddict>0.75</minToleranceToAddict> <!--was 0.016-->
+        <existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset> <!--was 0.20-->
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>10</listOrder>
       </li>
@@ -75,6 +62,26 @@
         <compClass>CompEquippable</compClass>
       </li>
     </comps>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.17</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <tableDesired>false</tableDesired>
+    </ingestible>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
     <weaponClasses>
       <li>Melee</li>
       <li>MeleeBlunt</li>
@@ -98,104 +105,33 @@
       </li>
     </tools>
   </ThingDef>
+  
+  <ThingDef ParentName="BeerLoverBeerBase">
+    <defName>Rimrona</defName>
+    <label>rimrona</label>
+    <description>The first beverage besides water ever consumed by mankind. Beer can taste good, but its main effect is intoxication. Excessive consumption can lead to alcohol blackouts and, over time, addiction.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/Rimrona</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>6</stackLimit>
+    <costList>
+      <RimronaWort>1</RimronaWort>
+    </costList>
+  </ThingDef>
 
-
-  <ThingDef ParentName="DrugBase">
+  <ThingDef ParentName="BeerLoverBeerBase">
     <defName>Rimsberg_pils</defName>
     <label>rimsberg pils</label>
     <description>The first beverage besides water ever consumed by mankind. Beer can taste good, but its main effect is intoxication. Excessive consumption can lead to alcohol blackouts and, over time, addiction.</description>
-    <descriptionHyperlinks>
-      <HediffDef>AlcoholHigh</HediffDef>
-      <HediffDef>AlcoholTolerance</HediffDef>
-      <HediffDef>Hangover</HediffDef>
-      <HediffDef>AlcoholAddiction</HediffDef>
-      <HediffDef>Cirrhosis</HediffDef>
-      <HediffDef>ChemicalDamageModerate</HediffDef>
-    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Item/Drug/Rimsberg_pils</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
-    <equippedAngleOffset>-150</equippedAngleOffset>
-    <rotatable>false</rotatable>
     <stackLimit>6</stackLimit>
     <costList>
       <Rimsberg_Pils_Wort>1</Rimsberg_Pils_Wort>
     </costList>
-    <statBases>
-      <DeteriorationRate>0.5</DeteriorationRate>
-      <MarketValue>12</MarketValue>
-      <Mass>0.3</Mass>
-      <Flammability>0.5</Flammability>
-      <Nutrition>0.08</Nutrition>
-    </statBases>
-    <ingestible>
-      <foodType>Fluid, Processed, Liquor</foodType>
-      <joyKind>Chemical</joyKind>
-      <joy>0.17</joy>
-      <nurseable>true</nurseable>
-      <drugCategory>Social</drugCategory>
-      <ingestSound>Ingest_Beer</ingestSound>
-      <ingestHoldOffsetStanding>
-        <northDefault>
-          <offset>(0.18,0,0)</offset>
-        </northDefault>
-      </ingestHoldOffsetStanding>
-      <ingestCommandString>Drink {0}</ingestCommandString>
-      <ingestReportString>Drinking {0}.</ingestReportString>
-      <chairSearchRadius>25</chairSearchRadius>
-      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
-      <tableDesired>false</tableDesired>
-      <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>AlcoholHigh</hediffDef>
-          <severity>0.15</severity>
-          <toleranceChemical>Alcohol</toleranceChemical>
-        </li>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>AlcoholTolerance</hediffDef>
-          <severity>0.016</severity>
-          <divideByBodySize>true</divideByBodySize>
-        </li>
-      </outcomeDoers>
-    </ingestible>
-    <equipmentType>Primary</equipmentType>
-    <techLevel>Neolithic</techLevel>
-    <comps>
-      <li Class="CompProperties_Drug">
-        <chemical>Alcohol</chemical>
-        <addictiveness>0.010</addictiveness>
-        <minToleranceToAddict>0.25</minToleranceToAddict>
-        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
-        <needLevelOffset>0.9</needLevelOffset>
-        <listOrder>10</listOrder>
-      </li>
-      <li>
-        <compClass>CompEquippable</compClass>
-      </li>
-    </comps>
-    <weaponClasses>
-      <li>Melee</li>
-      <li>MeleeBlunt</li>
-    </weaponClasses>
-    <tools>
-      <li>
-        <label>bottle</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>neck</label>
-        <capacities>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
   </ThingDef>
   
 </Defs>
