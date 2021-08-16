@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>BeerLover</name>
+    <description>You like beer? Then this mod is for you.</description>
+    <author>Michael Jänichen</author>
+    <supportedVersions>
+        <li>1.3</li>
+    </supportedVersions>
+    <packageId>miclux.beerlover</packageId>
+</ModMetaData>

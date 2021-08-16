@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName = "FermentingBarrel"]/thingClass</xpath>
+    <value>
+      <thingClass>BeerLover.Building_FermentingBarrel</thingClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/JobDef[defName = "FillFermentingBarrel"]/driverClass</xpath>
+    <value>
+      <driverClass>BeerLover.JobDriver_FillFermentingBarrel</driverClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/JobDef[defName = "TakeBeerOutOfFermentingBarrel"]/driverClass</xpath>
+    <value>
+      <driverClass>BeerLover.JobDriver_TakeBeerOutOfFermentingBarrel</driverClass>
+    </value>
+  </Operation>
+  <!--<Operation Class="PatchOperationReplace">
+    <xpath>/Defs/JobDef[defName = "FillFermentingBarrel"]/driverClass</xpath>
+    <value>
+      <driverClass>BeerLover.WorkGiver_FillFermentingBarrel</driverClass>
+  </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/JobDef[defName = "TakeBeerOutOfFermentingBarrel"]/driverClass</xpath>
+    <value>
+      <driverClass>BeerLover.WorkGiver_TakeBeerOutOfFermentingBarrel</driverClass>
+  </value>
+  </Operation>-->
+  
+ <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "FillFermentingBarrel"]/giverClass</xpath>
+    <value>
+      <giverClass>BeerLover.WorkGiver_FillFermentingBarrel</giverClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkGiverDef[defName = "TakeBeerOutOfFermentingBarrel"]/giverClass</xpath>
+    <value>
+      <giverClass>BeerLover.WorkGiver_TakeBeerOutOfFermentingBarrel</giverClass>
+    </value>
+  </Operation>
+  <!--<Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName = "Wort"]</xpath>
+    <value>
+      <ThingDef Namme="Wort" Abstract="True" ParentName="ResourceBase">
+        <defName>Wort</defName>
+        <label>wort</label>
+        <description>Un-fermented beer. This substance needs to ferment in a fermenting barrel before it becomes drinkable beer.</description>
+        <graphicData>
+          <texPath>Things/Item/Resource/Wort</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <rotatable>false</rotatable>
+        <stackLimit>25</stackLimit>
+        <thingCategories>
+          <li>Manufactured</li>
+        </thingCategories>
+        <statBases>
+          <DeteriorationRate>1.0</DeteriorationRate>
+          <MarketValue>2.5</MarketValue>
+          <Mass>0.8</Mass>
+          <Flammability>0.2</Flammability>
+          <MaxHitPoints>60</MaxHitPoints>
+        </statBases>
+        <tickerType>Rare</tickerType>
+        <comps>
+          <li Class="CompProperties_Rottable">
+            <daysToRotStart>5</daysToRotStart>
+            <rotDestroys>true</rotDestroys>
+          </li>
+        </comps>
+      </ThingDef>
+    </value>
+  </Operation>-->
+  
+  <!--Patch Make Wort Recipe-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName = "Brewery"]/recipes/li["Make_Wort"]</xpath>
+    <value>
+      <li>Make_RimronaWort</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RecipeDef[defName = "Make_Wort"]/products/Wort</xpath>
+    <value>
+      <RimronaWort>5</RimronaWort>
+    </value>
+  </Operation>
+  
+  <!--Add Recipes-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "Brewery"]/recipes</xpath>
+    <value>
+      <li>Make_Rimsberg_Pils_Wort</li>
+      <!-- add new one here -->
+    </value>
+  </Operation>
+  
+  
+</Patch>

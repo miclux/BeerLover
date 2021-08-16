@@ -1,0 +1,17 @@
+﻿Add Beer
+
+- Wort.xml
+	- just copy an existing wort and set a new defName
+	- add wort to _wortDefs in WorkGiver_FillFermentingBarrel.cs
+
+- Wort_Recipes.xml
+	- just copy an existing wort recipe and set a new defName
+	- change wort product <products><Rimsberg_Pils_Wort>5</Rimsberg_Pils_Wort></products>
+	- add recipe defName to BeerLover_Patches.xml at "Add Recipes"
+
+- Beer.xml
+	- <costList><Rimsberg_Pils_Wort>1</Rimsberg_Pils_Wort></costList> needs only one matching wort
+
+- translations are stored at Languages/[your language]/DefInjected/ThingDef/[your language].xml
+
+- Textures: take a look at existing beer like Rimrona

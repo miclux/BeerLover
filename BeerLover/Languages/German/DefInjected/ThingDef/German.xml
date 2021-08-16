@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <RimronaWort.label>Rimrona Bierwürze</RimronaWort.label>
+  <RimronaWort.description>Ungegorenes Bier. Diese Substanz muss in einem Gärbottich gären, bevor sie zu trinkbarem Bier wird.</RimronaWort.description>
+  
+  <Rimsberg_Pils_Wort.label>Rimrona Bierwürze</Rimsberg_Pils_Wort.label>
+  <Rimsberg_Pils_Wort.description>Ungegorenes Bier. Diese Substanz muss in einem Gärbottich gären, bevor sie zu trinkbarem Bier wird.</Rimsberg_Pils_Wort.description>
+
+  <Rimsberg_pils.label>Rimsberg Pils</Rimsberg_pils.label>
+  <Rimsberg_pils.description>Rimsberg Pils</Rimsberg_pils.description>
+
+  <Rimrona.label>Rimrona</Rimrona.label>
+  <Rimsberg_pils.description>Rimrona</Rimsberg_pils.description>
+
+</LanguageData>

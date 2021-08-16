@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  
+  <ContainsWort>Enthält {0} / {1} {2}.</ContainsWort>
+  <ContainsBeer>Enthält {0}</ContainsBeer>
+</LanguageData>

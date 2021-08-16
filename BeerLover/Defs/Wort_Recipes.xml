@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>Make_RimronaWort</defName>
+    <label>make rimrona wort</label>
+    <description>Make rimrona wort from hops and corn.</description>
+    <jobString>Making rimrona wort.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawHops</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawCorn</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawHops</li>
+        <li>RawCorn</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RimronaWort>5</RimronaWort>
+    </products>
+  </RecipeDef>
+  
+ <RecipeDef>
+    <defName>Make_Rimsberg_Pils_Wort</defName>
+    <label>make rimsberg pils wort</label>
+    <description>Make rimsberg pils wort from hops and corn.</description>
+    <jobString>Making rimsberg pils wort.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawHops</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawHops</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Rimsberg_Pils_Wort>5</Rimsberg_Pils_Wort>
+    </products>
+  </RecipeDef>
+</Defs>
