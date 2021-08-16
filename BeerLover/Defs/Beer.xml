@@ -115,5 +115,19 @@
       <Rimsberg_Pils_Wort>1</Rimsberg_Pils_Wort>
     </costList>
   </ThingDef>
+
+  <ThingDef ParentName="BeerLoverBeerBase">
+    <defName>Rimtika</defName>
+    <label>rimtika</label>
+    <description>The first beverage besides water ever consumed by mankind. Beer can taste good, but its main effect is intoxication. Excessive consumption can lead to alcohol blackouts and, over time, addiction.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/Rimtika</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>24</stackLimit>
+    <costList>
+      <Rimtika_Wort>1</Rimtika_Wort>
+    </costList>
+  </ThingDef>
   
 </Defs>

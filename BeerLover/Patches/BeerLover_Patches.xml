@@ -97,6 +97,7 @@
     <xpath>/Defs/ThingDef[defName = "Brewery"]/recipes</xpath>
     <value>
       <li>Make_Rimsberg_Pils_Wort</li>
+      <li>Make_Rimtika_Wort</li>
       <!-- add new one here -->
     </value>
   </Operation>

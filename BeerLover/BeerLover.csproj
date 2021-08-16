@@ -72,8 +72,11 @@
     <Content Include="Patches\BeerLover_Patches.xml" />
     <Content Include="Textures\Things\Item\Drug\Rimrona\Rimrona_a.png" />
     <Content Include="Textures\Things\Item\Drug\Rimrona\Rimrona_b.png" />
+    <Content Include="Textures\Things\Item\Drug\Rimtika\Rimtika_a.png" />
+    <Content Include="Textures\Things\Item\Drug\Rimtika\Rimtika_b.png" />
     <Content Include="Textures\Things\Item\Resource\RimronaWort.png" />
     <Content Include="Textures\Things\Item\Resource\RimsbergWort.png" />
+    <Content Include="Textures\Things\Item\Resource\RimtikaWort.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="About\Todo.todo" />

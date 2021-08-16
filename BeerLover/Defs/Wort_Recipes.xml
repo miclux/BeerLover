@@ -73,4 +73,45 @@
       <Rimsberg_Pils_Wort>5</Rimsberg_Pils_Wort>
     </products>
   </RecipeDef>
+
+  <RecipeDef>
+    <defName>Make_Rimtika_Wort</defName>
+    <label>make rimtika wort</label>
+    <description>Make rimtika wort from hops and corn.</description>
+    <jobString>Making rimtika wort.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawHops</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPotatoes</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawHops</li> 
+        <li>RawPotatoes</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Rimtika_Wort>5</Rimtika_Wort>
+    </products>
+  </RecipeDef>
 </Defs>

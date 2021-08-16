@@ -61,4 +61,34 @@
     </comps>
   </ThingDef>
 
+  <ThingDef ParentName="ResourceBase">
+    <defName>Rimtika_Wort</defName>
+    <label>rimtika wort</label>
+    <description>Un-fermented rimtika. This substance needs to ferment in a fermenting barrel before it becomes drinkable beer.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/RimtikaWort</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <statBases>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <MarketValue>2.5</MarketValue>
+      <Mass>0.8</Mass>
+      <Flammability>0.2</Flammability>
+      <MaxHitPoints>60</MaxHitPoints>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>5</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  
 </Defs>

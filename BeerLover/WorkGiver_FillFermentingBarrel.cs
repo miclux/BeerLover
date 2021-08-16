@@ -91,7 +91,7 @@ namespace BeerLover
 			return null;
 		}
 
-		private static IEnumerable<ThingDef> _wortDefs = new List<ThingDef>() { ThingDef.Named("RimronaWort"), ThingDef.Named("Rimsberg_Pils_Wort") };
+		private static IEnumerable<ThingDef> _wortDefs = new List<ThingDef>() { ThingDef.Named("RimronaWort"), ThingDef.Named("Rimsberg_Pils_Wort"), ThingDef.Named("Rimtika_Wort") };
 		private static string TemperatureTrans;
 		private static string NoWortTrans;
 	}
