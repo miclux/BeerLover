@@ -36,7 +36,7 @@
     <label>rimsberg pils wort</label>
     <description>Un-fermented rimrona. This substance needs to ferment in a fermenting barrel before it becomes drinkable beer.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Wort</texPath>
+      <texPath>Things/Item/Resource/RimsbergWort</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <healthAffectsPrice>false</healthAffectsPrice>
