@@ -244,12 +244,15 @@ namespace BeerLover
 		{
 			if (wortDef == null)
 				return null;
-			// TODO: Optimize
-			var defs = DefDatabase<ThingDef>.AllDefs;
-			var drugs = defs.Where(d => d.IsWithinCategory(ThingCategoryDefOf.Drugs)).Where(d => d.CostList != null && d.CostList.Count == 1);
-			var beer = drugs.SingleOrDefault(d => d.CostList.Count(cl => cl.thingDef.defName.Equals(wortDef.defName)) == 1);
+
+			var beer = DrugDefs.SingleOrDefault(d => d.CostList.Count(cl => cl.thingDef.defName.Equals(wortDef.defName)) == 1);
 
 			return beer;
+		}
+
+		private IEnumerable<ThingDef> DrugDefs
+		{
+			get { return _drugDefs ?? (_drugDefs = DefDatabase<ThingDef>.AllDefs.Where(d => d.IsWithinCategory(ThingCategoryDefOf.Drugs)).Where(d => d.CostList != null && d.CostList.Count == 1)); }
 		}
 
 		public override void Draw()
@@ -304,5 +307,6 @@ namespace BeerLover
 		private static readonly Color BarZeroProgressColor = new Color(0.4f, 0.27f, 0.22f);
 		private static readonly Color BarFermentedColor = new Color(0.9f, 0.85f, 0.2f);
 		private static readonly Material BarUnfilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0.3f, 0.3f, 0.3f), false);
+		private static IEnumerable<ThingDef> _drugDefs;
 	}
 }
