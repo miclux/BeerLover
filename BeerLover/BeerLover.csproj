@@ -72,6 +72,7 @@
     <Content Include="Patches\BeerLover_Patches.xml" />
     <Content Include="Textures\Things\Item\Drug\Rimrona\Rimrona_a.png" />
     <Content Include="Textures\Things\Item\Drug\Rimrona\Rimrona_b.png" />
+    <Content Include="Textures\Things\Item\Resource\RimronaWort.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="About\Todo.todo" />
