@@ -1,6 +1,4 @@
-﻿Add Beer
-
-- Wort.xml
+﻿- Wort.xml
 	- just copy an existing wort and set a new defName
 	- add wort to _wortDefs in WorkGiver_FillFermentingBarrel.cs
 
