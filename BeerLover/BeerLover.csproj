@@ -72,6 +72,7 @@
     <Content Include="Patches\BeerLover_Patches.xml" />
     <Content Include="Textures\Things\Item\Drug\Rimrona\Rimrona_a.png" />
     <Content Include="Textures\Things\Item\Drug\Rimrona\Rimrona_b.png" />
+    <Content Include="Textures\Things\Item\Drug\Rimsberg_pils\Rimsberg_pils_a.png" />
     <Content Include="Textures\Things\Item\Drug\Rimtika\Rimtika_a.png" />
     <Content Include="Textures\Things\Item\Drug\Rimtika\Rimtika_b.png" />
     <Content Include="Textures\Things\Item\Resource\RimronaWort.png" />
@@ -81,9 +82,7 @@
   <ItemGroup>
     <None Include="About\Todo.todo" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Textures\Things\Item\Drug\Rimsberg_pils\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>set mods="C:\RIMWorld_Debug\Mods\BeerLover"
