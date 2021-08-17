@@ -74,6 +74,7 @@
     <Content Include="Textures\Things\Item\Drug\Rimrona\Rimrona_a.png" />
     <Content Include="Textures\Things\Item\Drug\Rimrona\Rimrona_b.png" />
     <Content Include="Textures\Things\Item\Drug\Rimsberg_pils\Rimsberg_pils_a.png" />
+    <Content Include="Textures\Things\Item\Drug\Rimsberg_pils\Rimsberg_pils_b.png" />
     <Content Include="Textures\Things\Item\Drug\Rimtika\Rimtika_a.png" />
     <Content Include="Textures\Things\Item\Drug\Rimtika\Rimtika_b.png" />
     <Content Include="Textures\Things\Item\Resource\RimronaWort.png" />
