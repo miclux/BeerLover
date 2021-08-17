@@ -60,6 +60,7 @@
   <ItemGroup>
     <Content Include="About\About.xml" />
     <Content Include="About\Howto.txt" />
+    <Content Include="About\Preview.png" />
     <Content Include="Defs\Beer.xml" />
     <Content Include="Defs\Beer_Recipes.xml" />
     <Content Include="Defs\Wort_Recipes.xml" />
